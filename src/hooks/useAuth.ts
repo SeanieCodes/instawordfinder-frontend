@@ -10,7 +10,7 @@ import { AuthState, LoginCredentials, RegisterCredentials, User } from '../types
 
 // Initial state for authentication
 const initialState: AuthState = {
-  user: null,
+  user: null as User | null,
   token: localStorage.getItem('token'),
   isAuthenticated: isLoggedIn(),
   loading: false,
@@ -32,9 +32,13 @@ export const useAuth = () => {
     try {
       setState(prev => ({ ...prev, loading: true }));
       const response = await getCurrentUser();
+      
+      // This explicitly uses the User type from the response
+      const userData: User = response.user;
+      
       setState(prev => ({
         ...prev,
-        user: response.user,
+        user: userData,
         isAuthenticated: true,
         loading: false
       }));
@@ -56,9 +60,13 @@ export const useAuth = () => {
     try {
       setState(prev => ({ ...prev, loading: true, error: null }));
       const response = await loginService(credentials);
+      
+      // Explicitly using User type to ensure type safety
+      const userData: User = response.user;
+      
       setState(prev => ({
         ...prev,
-        user: response.user,
+        user: userData,
         token: response.token,
         isAuthenticated: true,
         loading: false
@@ -79,9 +87,13 @@ export const useAuth = () => {
     try {
       setState(prev => ({ ...prev, loading: true, error: null }));
       const response = await registerService(credentials);
+      
+      // Explicitly typing the user data
+      const userData: User = response.user;
+      
       setState(prev => ({
         ...prev,
-        user: response.user,
+        user: userData,
         token: response.token,
         isAuthenticated: true,
         loading: false
