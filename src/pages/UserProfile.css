@@ -1,0 +1,126 @@
+.user-profile-container {
+    width: 100%;
+  }
+  
+  .profile-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .profile-group {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid var(--light-blue);
+    box-shadow: 0 0 15px var(--glow);
+  }
+  
+  .profile-group-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .profile-posts-list {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    background-color: var(--white);
+  }
+  
+  .post-card {
+    background-color: var(--gray);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: all 0.2s ease;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+  
+  .post-date {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+  
+  .post-caption {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .view-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+    padding: 0.5rem 0;
+  }
+  
+  .view-link:hover {
+    text-decoration: underline;
+  }
+  
+  .delete-button {
+    background-color: #ff4d4d;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .delete-button:hover {
+    background-color: #ff3333;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);
+  }
+  
+  .no-saved-posts {
+    text-align: center;
+    color: var(--dark-gray);
+    margin: 2rem 0;
+    font-style: italic;
+  }
+  
+  .keywords-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.8rem;
+    background-color: var(--white);
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+  
+  .keywords-container p {
+    margin-right: 0.5rem;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+  }
+  
+  .keywords-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .keyword-tag {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }

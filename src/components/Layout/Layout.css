@@ -1,0 +1,59 @@
+.layout-background {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    background-image: url('../../assets/bluemarble.png');
+    background-repeat: repeat;
+    background-size: 1800px;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  
+  .layout-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: rgba(63, 230, 249, 0.385);
+  }
+  
+  .app-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 20px;
+    border: 2px solid var(--light-blue);
+    box-shadow: 0 0 20px var(--glow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+  }
+  
+  .auth-page-container {
+    max-width: 450px;
+  }
+  
+  @media (max-width: 768px) {
+    .app-container {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  }

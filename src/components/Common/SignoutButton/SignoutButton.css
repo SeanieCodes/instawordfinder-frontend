@@ -1,0 +1,22 @@
+.signout-button {
+    padding: 8px 16px;
+    border: 2px solid var(--light-blue);
+    border-radius: 12px;
+    background-color: var(--white);
+    color: var(--deeper-blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+    position: relative;
+}
+
+.signout-button:hover {
+    border: 2px solid var(--light-blue);
+    box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--light-blue);
+}
+
+.signout-button:focus {
+    outline: none;
+}
